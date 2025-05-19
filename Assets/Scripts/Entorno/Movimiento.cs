@@ -5,6 +5,10 @@ public class Movimiento : MonoBehaviour
     [Header("Movimiento")]
     public float velocidadMovimiento = 5f;
 
+    [Header("Salto")]
+    public float fuerzaSalto = 8f;
+    public float gravedad = 20f;
+
     [Header("Rotación")]
     public Transform camaraFPS;
     public float sensibilidadMouse = 2f;
@@ -12,6 +16,8 @@ public class Movimiento : MonoBehaviour
 
     private float rotacionX = 0f;
     private CharacterController controller;
+    private Vector3 direccionMovimiento;
+    private float velocidadVertical;
 
     void Start()
     {
@@ -21,13 +27,32 @@ public class Movimiento : MonoBehaviour
 
     void Update()
     {
-        // Movimiento
+        // Movimiento horizontal
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-        Vector3 direccion = transform.right * h + transform.forward * v;
-        controller.Move(direccion * velocidadMovimiento * Time.deltaTime);
+        Vector3 direccionHorizontal = transform.right * h + transform.forward * v;
+        direccionHorizontal *= velocidadMovimiento;
 
-        // Rotación del mouse
+        // Saltar si está en el suelo
+        if (controller.isGrounded)
+        {
+            velocidadVertical = -1f; // Mantenlo pegado al suelo
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                velocidadVertical = fuerzaSalto;
+            }
+        }
+        else
+        {
+            velocidadVertical -= gravedad * Time.deltaTime;
+        }
+
+        // Combinar el movimiento horizontal con el vertical
+        direccionMovimiento = direccionHorizontal + Vector3.up * velocidadVertical;
+        controller.Move(direccionMovimiento * Time.deltaTime);
+
+        // Rotación de cámara y personaje
         float mouseX = Input.GetAxis("Mouse X") * sensibilidadMouse;
         float mouseY = Input.GetAxis("Mouse Y") * sensibilidadMouse;
 

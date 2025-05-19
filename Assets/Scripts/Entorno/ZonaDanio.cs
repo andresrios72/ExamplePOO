@@ -10,18 +10,19 @@ public class ZonaDanio : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Portador portador = other.GetComponent<Portador>();
-        if (portador != null)
+        PortadorJugable portadorJ = other.GetComponent<PortadorJugable>();
+        
+        if (portadorJ != null)
         {
             // Inicializar si no está en el diccionario
-            if (!tiempoSiguienteTic.ContainsKey(portador))
-                tiempoSiguienteTic[portador] = Time.time;
+            if (!tiempoSiguienteTic.ContainsKey(portadorJ))
+                tiempoSiguienteTic[portadorJ] = Time.time;
 
             // Aplicar daño si pasó el intervalo
-            if (Time.time >= tiempoSiguienteTic[portador])
+            if (Time.time >= tiempoSiguienteTic[portadorJ])
             {
-                portador.RecibirDaño(dañoPorTic);
-                tiempoSiguienteTic[portador] = Time.time + intervalo;
+                portadorJ.RecibirDaño(dañoPorTic);                
+                tiempoSiguienteTic[portadorJ] = Time.time + intervalo;
                 Debug.Log("El personaje esta recibiendo daño");
             }
         }

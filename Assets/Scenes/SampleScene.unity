@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddeb9796745b3be45ad4a05c564a9d95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Esta vara
+  nombre: Merlyn
   vida:
     valorMinimo: 0
     valorMaximo: 100
@@ -611,7 +611,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5f274054768cab24bb4a35b20e53c0f9, type: 2}
   - {fileID: 11400000, guid: ea5b5ca2eb5cd5a4b9fd7d01b659b329, type: 2}
   - {fileID: 11400000, guid: 48d6fa2066e725f47a6a5bb38a25b37a, type: 2}
-  habilidadUI: []
+  habilidadUI:
+  - {fileID: 1778317398}
+  - {fileID: 1543558428}
+  - {fileID: 959077077}
 --- !u!114 &154093442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,6 +628,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadMovimiento: 5
+  fuerzaSalto: 8
+  gravedad: 20
   camaraFPS: {fileID: 347471800}
   sensibilidadMouse: 2
   limiteVertical: 80
@@ -3590,7 +3595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a6cda062fa4264f8b9c86926e52740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Oscar
+  nombre: Andres
   vida:
     valorMinimo: 0
     valorMaximo: 100
@@ -3602,7 +3607,7 @@ MonoBehaviour:
     valorMaximo: 100
     valorActual: 100
     tipoCaga: 1
-  HabilidadesIniciales:
+  habilidadesIniciales:
   - {fileID: 11400000, guid: 5f274054768cab24bb4a35b20e53c0f9, type: 2}
   - {fileID: 11400000, guid: ea5b5ca2eb5cd5a4b9fd7d01b659b329, type: 2}
   - {fileID: 11400000, guid: 48d6fa2066e725f47a6a5bb38a25b37a, type: 2}
@@ -3623,6 +3628,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadMovimiento: 5
+  fuerzaSalto: 8
+  gravedad: 20
   camaraFPS: {fileID: 1667132197}
   sensibilidadMouse: 2
   limiteVertical: 80

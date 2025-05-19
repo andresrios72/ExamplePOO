@@ -17,8 +17,8 @@ MonoBehaviour:
   tipoHabilidad: 1
   costo: 10
   coolDown: 5
-  ultimoUso: -999
+  ultimoUso: 15.646308
   "da\xF1o": 30
-  radio: 2
-  duracion: 2
-  efectoVisual: {fileID: 2787556212050310887, guid: 57970c6bb711ec24b8d98424b1806f3b, type: 3}
+  radio: 20
+  duracion: 5
+  efectoVisual: {fileID: 3280519133390621005, guid: a71be3e7990efb040a07565c43cbb198, type: 3}
