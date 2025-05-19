@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AgenteUno : PortadorJugable
 {
-    public List<Habilidad> HabilidadesIniciales;
+    public List<Habilidad> habilidadesIniciales;
     public UIHabilidad[] habilidadUI;
     //private void Start()
     //{
@@ -15,11 +15,11 @@ public class AgenteUno : PortadorJugable
     //}
     private void Start()
     {
-        for (int i = 0; i < HabilidadesIniciales.Count && i < habilidadUI.Length; i++)
+        for (int i = 0; i < habilidadesIniciales.Count && i < habilidadUI.Length; i++)
         {
-            sistemaHabilidades.AgregarHabilidad(HabilidadesIniciales[i]);
-            habilidadUI[i].Configurar(HabilidadesIniciales[i], ObtenerLetra(i));
-            HabilidadesIniciales[i].ultimoUso = -999f; // reset
+            sistemaHabilidades.AgregarHabilidad(habilidadesIniciales[i]);
+            habilidadUI[i].Configurar(habilidadesIniciales[i], ObtenerLetra(i));
+            habilidadesIniciales[i].ultimoUso = -999f; // reset
         }
     }
 

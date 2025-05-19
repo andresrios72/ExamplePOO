@@ -16,7 +16,7 @@ MonoBehaviour:
   icono: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   tipoHabilidad: 0
   costo: 10
-  coolDown: 1
-  ultimoUso: 1.654389
+  coolDown: 2
+  ultimoUso: -999
   curacionCompleta: 1
   cantidadCuracion: 30

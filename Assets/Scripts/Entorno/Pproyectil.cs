@@ -19,7 +19,7 @@ public class Pproyectil : MonoBehaviour
         Portador portador = other.GetComponent<Portador>();
         if (portador != null)
         {
-            portador.RecibirDaño(danio);
+            portador.RecibirDaño(portador.vida.tipoCarga == TipoCarga.Instantanea ? portador.vida.ValorMaximo : danio);
             Debug.Log($"{portador.nombre} ha recibido {danio} de daño por proyectil.");
         }
         // Efecto visual

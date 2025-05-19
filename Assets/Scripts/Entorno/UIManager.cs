@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
     {
         if (portador == null || barra == null) return;
 
-        float actual = esVida ? portador.vida.ValorActual: portador.mana.ValorActual;
+        float actual = esVida ? portador.vida.ValorActual : portador.mana.ValorActual;
         barra.value = actual;
     }
 }
