@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Muu
   vida:
-    valorMinimo: 10
+    valorMinimo: 0
     valorMaximo: 100
     valorActual: 100
-    tipoCarga: 1
+    tipoCarga: 0
