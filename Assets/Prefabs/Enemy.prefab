@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18cd9c319fc87d942a2c25b7ba9d2bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Muu
+  nombre: Maduro
   vida:
     valorMinimo: 0
     valorMaximo: 100
